@@ -40,8 +40,22 @@ public class Atbash
         String answer = "";
         String cleanString = aStr.replaceAll("[ ,.]", "").toLowerCase();
 
+        for (int i = 0; i < cleanString.length(); i++)
+        {
+            char aChar = cleanString.charAt(i);
+            int movement = 0;
+            char aDefault = 'a';
 
-
+            if (Character.isLetter(aChar))
+            {
+                movement = 'z' - aChar;
+                aDefault = (char) ('a' + movement);
+                answer = answer.concat(Character.toString(aDefault));
+            } else if (Character.isDigit(aChar))
+            {
+                answer = answer.concat(Character.toString(aChar));
+            }
+        }
         return answer;
     }
 }
