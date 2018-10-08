@@ -2,6 +2,12 @@ public class Atbash
 {
 
 
+    /**
+     * Encodes string using AtBash cypher. Encodes letters according to the difference of first letter from the distance at 'a'.
+     * Then using this distance, substracts the distance from 'z' and that is the encrypted letter
+     * @param aStr String
+     * @return String
+     */
     public String encode(String aStr)
     {
         String cleanString = aStr.replaceAll("[ ,.]", "").toLowerCase();
@@ -35,6 +41,11 @@ public class Atbash
         return answer;
     }
 
+    /**
+     * Decodes cypher using the inverse of the encode function.
+     * @param aStr
+     * @return
+     */
     public String decode(String aStr)
     {
         String answer = "";
