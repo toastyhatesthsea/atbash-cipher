@@ -38,6 +38,9 @@ public class Atbash
     public String decode(String aStr)
     {
         String answer = "";
+        String cleanString = aStr.replaceAll("[ ,.]", "").toLowerCase();
+
+
 
         return answer;
     }
